@@ -1,0 +1,30 @@
+{
+  "name": "react-sqlite-ticketing",
+  "version": "1.0.0",
+  "description": "Full-stack React & TypeScript Issue Ticketing System with SQLite database",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"server,client\" -c \"blue,magenta\" \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:client": "npm run dev --workspace=client",
+    "seed": "npm run seed --workspace=server",
+    "build": "npm run build --workspace=server && npm run build --workspace=client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "sqlite",
+    "ticketing",
+    "kanban",
+    "issues"
+  ],
+  "author": "",
+  "license": "MIT"
+}
